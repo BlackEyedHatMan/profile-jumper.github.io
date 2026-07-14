@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-GB" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+
+    <!-- Twitter / X Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Profile Jumper!">
+    <meta name="twitter:description" content="Jump easily between your profiles">
+    <meta name="twitter:image" content="https://profilejumper.com/assets/image/social/x/profile-jumper-preview-for-x.png">
+
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  </head>
+
+  {% include analytics.html %}
+
+  <body>
+    {% include header.html %}
+
+    <main {% if page.main_view %} class="{{ page.main_view }}" {% endif %} >
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
